@@ -25,6 +25,7 @@ export const providerCallback = (accountsServer: AccountsServer) => async (
       },
       { ip, userAgent }
     );
+    // res.cookie('access-token', loggedInUser.tokens.accessToken);
     res.json(loggedInUser);
   } catch (err) {
     sendError(res, err);
